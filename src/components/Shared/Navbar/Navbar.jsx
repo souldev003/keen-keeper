@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "../.././app/assets/logo.png";
+import logoImage from "@/app/assets/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FaHome, FaRegClock } from "react-icons/fa";
