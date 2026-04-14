@@ -1,14 +1,14 @@
 import React from "react";
 import logoImage from "@/app/assets/logo.png";
 import Image from "next/image";
-import Link from "next/link";
+import ActiveLink from "./ActiveLink";
 import { FaHome, FaRegClock } from "react-icons/fa";
 import { TfiStatsUp } from "react-icons/tfi";
 
 const Navbar = () => {
   return (
-    <div className="shadow-sm">
-      <div className="navbar bg-base-100 container mx-auto">
+    <div className="shadow-sm bg-base-100 sticky top-0 z-50">
+      <div className="navbar container mx-auto">
         <div className="flex-1">
           <Image
             src={logoImage}
@@ -20,33 +20,21 @@ const Navbar = () => {
           />
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-1">
             <li>
-              <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
-                href="/"
-              >
-                <FaHome />
-                Home
-              </Link>
+              <ActiveLink href="/">
+                <FaHome /> Home
+              </ActiveLink>
             </li>
             <li>
-              <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
-                href="/timeline"
-              >
-                <FaRegClock />
-                Timeline
-              </Link>
+              <ActiveLink href="/timeline">
+                <FaRegClock /> Timeline
+              </ActiveLink>
             </li>
             <li>
-              <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
-                href="/stats"
-              >
-                <TfiStatsUp />
-                Stats
-              </Link>
+              <ActiveLink href="/stats">
+                <TfiStatsUp /> Stats
+              </ActiveLink>
             </li>
           </ul>
         </div>
