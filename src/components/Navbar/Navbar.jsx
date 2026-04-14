@@ -23,7 +23,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">
             <li>
               <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md"
+                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
                 href="/"
               >
                 <FaHome />
@@ -32,7 +32,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md"
+                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
                 href="/timeline"
               >
                 <FaRegClock />
@@ -41,7 +41,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md"
+                className="text-[#64748B] py-3 px-4 flex items-center justify-center hover:text-[#ffffff] hover:bg-[#244D3F] transition-colors duration-300 rounded-md active:scale-95"
                 href="/stats"
               >
                 <TfiStatsUp />
