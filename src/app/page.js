@@ -1,5 +1,5 @@
 import Banner from "@/components/Home/Banner";
-import Friends from "./../components/Home/Friends/Friends";
+import Friends from "@/components/Home/Friends/Friends";
 
 export default function Home() {
   return (

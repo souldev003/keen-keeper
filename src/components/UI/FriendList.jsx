@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const FriendList = ({ friends }) => {
   return (
@@ -12,12 +13,13 @@ const FriendList = ({ friends }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {friends.map((friend) => (
-          <div
+          <Link
+            href={`/friend/${friend.id}`}
             key={friend.id}
             className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center text-center cursor-pointer"
           >
             <div className="relative w-24 h-24 mb-4">
-              <div className="w-full h-full rounded-full overflow-hidden border-2 border-gray-50 shadow-inner">
+              <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-gray-50 shadow-inner">
                 <Image
                   src={friend.picture}
                   alt={friend.name}
@@ -37,7 +39,7 @@ const FriendList = ({ friends }) => {
               {friend.tags.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 bg-green-50 text-green-600 text-[10px] font-bold uppercase rounded-full"
+                  className="px-3 border border-[#28d69c] py-1 bg-green-50 text-green-600 text-[10px] font-bold uppercase rounded-full"
                 >
                   {tag}
                 </span>
@@ -61,7 +63,7 @@ const FriendList = ({ friends }) => {
             >
               {friend.status}
             </span>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

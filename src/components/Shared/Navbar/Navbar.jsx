@@ -2,14 +2,45 @@ import React from "react";
 import logoImage from "@/app/assets/logo.png";
 import Image from "next/image";
 import ActiveLink from "./ActiveLink";
-import { FaHome, FaRegClock } from "react-icons/fa";
-import { TfiStatsUp } from "react-icons/tfi";
+import { FaHome, FaRegClock, FaBars, FaRegChartBar } from "react-icons/fa";
 
 const Navbar = () => {
+  const navLinks = (
+    <>
+      <li>
+        <ActiveLink href="/">
+          <FaHome /> Home
+        </ActiveLink>
+      </li>
+      <li>
+        <ActiveLink href="/timeline">
+          <FaRegClock /> Timeline
+        </ActiveLink>
+      </li>
+      <li>
+        <ActiveLink href="/stats">
+          <FaRegChartBar /> Stats
+        </ActiveLink>
+      </li>
+    </>
+  );
+
   return (
     <div className="shadow-sm bg-base-100 sticky top-0 z-50">
       <div className="navbar container mx-auto">
-        <div className="flex-1">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <FaBars className="text-xl" />
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52 gap-2"
+            >
+              {navLinks}
+            </ul>
+          </div>
+
           <Image
             src={logoImage}
             alt="Keen Keeper Logo"
@@ -19,24 +50,9 @@ const Navbar = () => {
             loading="eager"
           />
         </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1 gap-1">
-            <li>
-              <ActiveLink href="/">
-                <FaHome /> Home
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink href="/timeline">
-                <FaRegClock /> Timeline
-              </ActiveLink>
-            </li>
-            <li>
-              <ActiveLink href="/stats">
-                <TfiStatsUp /> Stats
-              </ActiveLink>
-            </li>
-          </ul>
+
+        <div className="navbar-end hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 gap-2">{navLinks}</ul>
         </div>
       </div>
     </div>

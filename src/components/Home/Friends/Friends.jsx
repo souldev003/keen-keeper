@@ -1,6 +1,6 @@
 import React from "react";
-import FriendStats from "../../UI/FriendStats";
-import FriendList from "../../UI/FriendList";
+import FriendStats from "@/components/UI/FriendStats";
+import FriendList from "@/components/UI/FriendList";
 
 async function getFriends() {
   const res = await fetch("http://localhost:3000/data.json", {
