@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
-import FriendStats from "./FriendStats";
 
 const Banner = () => {
   return (
@@ -23,7 +22,6 @@ const Banner = () => {
               Add Friend
             </button>
           </div>
-          <FriendStats />
         </div>
       </div>
     </section>
