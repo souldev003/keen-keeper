@@ -9,7 +9,7 @@
     "tags": ["college", "close friend"],
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
-    "next_due_date": "2025-07-20"
+    "next_due_date": "2026-07-20"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "tags": ["office", "teammate"],
     "bio": "Works in the same team. Loves coffee chats.",
     "goal": 7,
-    "next_due_date": "2025-07-15"
+    "next_due_date": "2026-07-15"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "tags": ["gym", "buddy"],
     "bio": "Met at gym. Regular workout partner.",
     "goal": 10,
-    "next_due_date": "2025-07-10"
+    "next_due_date": "2026-07-10"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "tags": ["family", "cousin"],
     "bio": "Close cousin. We talk frequently.",
     "goal": 3,
-    "next_due_date": "2025-07-18"
+    "next_due_date": "2026-07-18"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "tags": ["old friend"],
     "bio": "School friend. Lost touch recently.",
     "goal": 15,
-    "next_due_date": "2025-07-05"
+    "next_due_date": "2026-07-05"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "tags": ["university", "group mate"],
     "bio": "Worked on projects together.",
     "goal": 10,
-    "next_due_date": "2025-07-16"
+    "next_due_date": "2026-07-16"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "tags": ["friend", "gaming"],
     "bio": "Play games together on weekends.",
     "goal": 7,
-    "next_due_date": "2025-07-12"
+    "next_due_date": "2026-07-12"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "tags": ["client"],
     "bio": "Client from freelance work.",
     "goal": 5,
-    "next_due_date": "2025-07-19"
+    "next_due_date": "2026-07-19"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "tags": ["neighbor"],
     "bio": "Lives nearby. Rarely meet now.",
     "goal": 20,
-    "next_due_date": "2025-07-08"
+    "next_due_date": "2026-07-08"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "tags": ["designer", "colleague"],
     "bio": "Works as UI designer.",
     "goal": 7,
-    "next_due_date": "2025-07-17"
+    "next_due_date": "2026-07-17"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "tags": ["school", "friend"],
     "bio": "Old school friend.",
     "goal": 10,
-    "next_due_date": "2025-07-11"
+    "next_due_date": "2026-07-11"
   },
   {
     "id": 12,
@@ -141,6 +141,6 @@
     "tags": ["mentor"],
     "bio": "Guides in career decisions.",
     "goal": 5,
-    "next_due_date": "2025-07-18"
+    "next_due_date": "2026-07-18"
   }
 ]
