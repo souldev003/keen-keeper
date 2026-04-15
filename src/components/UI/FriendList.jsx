@@ -52,13 +52,7 @@ const FriendList = ({ friends }) => {
                   ? "bg-[#e65757]"
                   : friend.status === "on-track"
                     ? "bg-[#244D3F]"
-                    : friend.status === "almost-due"
-                      ? "bg-[#EFAD44]"
-                      : friend.status === "needs-attention"
-                        ? "bg-[#f80000]"
-                        : friend.status === "active"
-                          ? "bg-[#15dd1f]"
-                          : "bg-gray-400"
+                    : "bg-[#EFAD44]"
               }`}
             >
               {friend.status}

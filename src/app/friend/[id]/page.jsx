@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { BsBell, BsArchive, BsTrash } from "react-icons/bs";
 import QuickCheckInArea from "@/components/UI/QuickCheckInArea";
+import Link from "next/link";
 
 async function getFriendDetails(id) {
   try {
@@ -21,6 +22,24 @@ async function getFriendDetails(id) {
   }
 }
 
+export async function generateMetadata({ params }) {
+  const getParam = await params;
+  const id = getParam.id;
+
+  const friend = await getFriendDetails(id);
+
+  if (!friend) {
+    return {
+      title: "Friend Not Found | KeenKeeper",
+    };
+  }
+
+  return {
+    title: `${friend.name} - Details | KeenKeeper`,
+    description: `Check-in details and history for ${friend.name}`,
+  };
+}
+
 const FriendDetailsPage = async ({ params }) => {
   const getParam = await params;
   const id = getParam.id;
@@ -28,7 +47,38 @@ const FriendDetailsPage = async ({ params }) => {
   const friend = await getFriendDetails(id);
 
   if (!friend) {
-    return <div className="p-4 text-center">Friend not found.</div>;
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] p-4 text-center">
+        <div className="bg-red-50 p-6 rounded-full mb-4">
+          <svg
+            className="w-16 h-16 text-red-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <h2 className="text-2xl font-bold text-gray-800 mb-2">
+          Friend Not Found
+        </h2>
+        <p className="text-gray-500 max-w-sm mb-6">
+          The friend you are looking for doesn&apos;t exist or might have been
+          removed from your list.
+        </p>
+        <Link
+          href="/"
+          className="px-6 py-2 bg-[#244D3F] text-white rounded-full font-medium hover:bg-opacity-90 transition-all shadow-md"
+        >
+          Back to Home
+        </Link>
+      </div>
+    );
   }
 
   return (
@@ -58,13 +108,7 @@ const FriendDetailsPage = async ({ params }) => {
                   ? "bg-[#e65757]"
                   : friend.status === "on-track"
                     ? "bg-[#244D3F]"
-                    : friend.status === "almost-due"
-                      ? "bg-[#EFAD44]"
-                      : friend.status === "needs-attention"
-                        ? "bg-[#f80000]"
-                        : friend.status === "active"
-                          ? "bg-[#15dd1f]"
-                          : "bg-gray-400"
+                    : "bg-[#EFAD44]"
               }`}
             >
               {friend.status}

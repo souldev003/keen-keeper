@@ -8,7 +8,12 @@ const FriendActions = ({ friend, onAction }) => {
   const { addHistory } = useContext(TimelineContext);
 
   const handleAction = (type) => {
-    toast.success(`${type} recorded successfully with ${friend.name}!`);
+    toast.success(`${type} with ${friend.name} successful!`, {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      className: "!bg-[#244D3F] !text-white text-sm font-medium",
+    });
 
     if (addHistory) {
       addHistory(type, friend);

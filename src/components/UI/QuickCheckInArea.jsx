@@ -22,7 +22,7 @@ const QuickCheckInArea = ({ friend }) => {
       {friendActivities.length > 0 && (
         <div className="mt-4">
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">
-            Recent Activity
+            Recent Activity (Last 5)
           </h3>
 
           <div className="space-y-3">

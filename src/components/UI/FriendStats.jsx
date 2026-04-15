@@ -19,10 +19,7 @@ const FriendStats = ({ friends }) => {
 
       <div className="p-8 bg-[#FFFFFF] rounded-md shadow-md text-center">
         <span className="text-3xl font-semibold text-[#244D3F]">
-          {
-            friends.filter((friend) => friend.status === "needs-attention")
-              .length
-          }
+          {friends.filter((friend) => friend.status === "overdue").length}
         </span>
         <h3 className="text-lg text-[#64748B] mb-2">Need Attention</h3>
       </div>
