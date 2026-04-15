@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { BsBell, BsArchive, BsTrash } from "react-icons/bs";
-import FriendActions from "@/components/UI/FriendAction";
+import QuickCheckInArea from "@/components/UI/QuickCheckInArea";
 
 async function getFriendDetails(id) {
   try {
@@ -157,7 +157,7 @@ const FriendDetailsPage = async ({ params }) => {
 
           <div className="bg-white p-5 md:p-8 rounded-md shadow-sm border border-gray-100 flex flex-col gap-6">
             <h2 className="text-lg font-bold text-gray-800">Quick Check-In</h2>
-            <FriendActions friend={friend} />
+            <QuickCheckInArea friend={friend} />
           </div>
         </div>
       </div>
