@@ -1,13 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import {
-  BsBell,
-  BsArchive,
-  BsTrash,
-  BsTelephone,
-  BsChatLeftText,
-  BsCameraVideo,
-} from "react-icons/bs";
+import { BsBell, BsArchive, BsTrash } from "react-icons/bs";
+import FriendActions from "@/components/UI/FriendAction";
 
 async function getFriendDetails(id) {
   try {
@@ -163,22 +157,7 @@ const FriendDetailsPage = async ({ params }) => {
 
           <div className="bg-white p-5 md:p-8 rounded-md shadow-sm border border-gray-100 flex flex-col gap-6">
             <h2 className="text-lg font-bold text-gray-800">Quick Check-In</h2>
-            <div className="flex gap-4">
-              <button className="flex-1 bg-white p-3 md:p-5 rounded-md border border-gray-100 flex flex-col items-center justify-center gap-2 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer">
-                <BsTelephone className="text-2xl text-gray-700" />
-                Call
-              </button>
-
-              <button className="flex-1 bg-white p-3 md:p-5 rounded-md border border-gray-100 flex flex-col items-center justify-center gap-2 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer">
-                <BsChatLeftText className="text-2xl text-gray-700" />
-                Text
-              </button>
-
-              <button className="flex-1 bg-white p-3 md:p-5 rounded-md border border-gray-100 flex flex-col items-center justify-center gap-2 font-semibold text-gray-800 hover:bg-gray-50 transition cursor-pointer">
-                <BsCameraVideo className="text-2xl text-gray-700" />
-                Video
-              </button>
-            </div>
+            <FriendActions friend={friend} />
           </div>
         </div>
       </div>

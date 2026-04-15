@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Shared/Navbar/Navbar";
 import Footer from "@/components/Shared/Footer/Footer";
+import { ToastContainer } from "react-toastify";
+import { TimelineProvider } from "@/context/TimelineContext";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -27,9 +29,12 @@ export default function RootLayout({ children }) {
       className={`${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
+        <TimelineProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <ToastContainer position="top-right" autoClose={2000} />
+        </TimelineProvider>
       </body>
     </html>
   );

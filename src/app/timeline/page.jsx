@@ -1,15 +1,23 @@
+import TimelineUI from "@/components/UI/TimeLineUI";
 import React from "react";
 
 export const metadata = {
   title: "Timeline | KeenKeeper",
   description:
-    "View your history of interactions and meaningful moments with friends.",
+    "View your friendsData of interactions and meaningful moments with friends.",
 };
 
 const TimeLinePage = () => {
   return (
-    <div className="bg-[#F8FAFC] min-h-screen flex items-center justify-center">
-      <h1 className="text-2xl font-bold">timeline</h1>
+    <div className="bg-[#F8FAFC] min-h-screen">
+      <div className="max-w-2xl mx-auto py-8 lg:pt-20">
+        <div>
+          <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">
+            Timeline
+          </h1>
+        </div>
+        <TimelineUI />
+      </div>
     </div>
   );
 };
