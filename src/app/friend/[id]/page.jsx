@@ -6,7 +6,7 @@ import Link from "next/link";
 
 async function getFriendDetails(id) {
   try {
-    const res = await fetch(`http://localhost:3000/data.json`, {
+    const res = await fetch(`https://keen-keeper-inky.vercel.app/data.json`, {
       cache: "no-store",
     });
 

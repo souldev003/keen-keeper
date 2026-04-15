@@ -3,7 +3,7 @@ import FriendStats from "@/components/UI/FriendStats";
 import FriendList from "@/components/UI/FriendList";
 
 async function getFriends() {
-  const res = await fetch("http://localhost:3000/data.json", {
+  const res = await fetch("https://keen-keeper-inky.vercel.app/data.json", {
     cache: "no-store",
   });
   return res.json();
