@@ -17,8 +17,11 @@ const TimelineUI = () => {
   return (
     <div className="max-w-2xl mx-auto p-4">
       <div className="mb-6">
-        <select className="border p-2 rounded text-gray-400 w-40 text-sm">
+        <select className="border p-3 rounded text-gray-400 w-40 text-sm">
           <option>Filter timeline</option>
+          <option>Calls</option>
+          <option>Texts</option>
+          <option>Video Calls</option>
         </select>
       </div>
 
